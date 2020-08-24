@@ -24,8 +24,8 @@
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_below="@id/title"
-        android:src="@drawable/band_cover"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="10dp"
+        android:src="@drawable/band_cover"/>
 
     <LinearLayout
         android:id="@+id/song_title_list"
@@ -40,8 +40,8 @@
             style="@style/song_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="All I Need"
-            android:onClick="playSong1"/>
+            android:onClick="playSong1"
+            android:text="All I Need"/>
 
         <TextView
             android:id="@+id/song2_text_view"
@@ -49,6 +49,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/song1_text_view"
+            android:onClick="playSong2"
             android:text="Headrest For My Soul"/>
 
         <TextView
@@ -57,6 +58,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/song2_text_view"
+            android:onClick="playSong3"
             android:text="I Am"/>
 
         <TextView
@@ -65,6 +67,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/song3_text_view"
+            android:onClick="playSong4"
             android:text="Jailbreak"/>
 
         <TextView
@@ -73,6 +76,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/song4_text_view"
+            android:onClick="playSong5"
             android:text="Kill Your Heroes"/>
 
         <TextView
@@ -81,6 +85,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/song5_text_view"
+            android:onClick="playSong6"
             android:text="Not Your Fault"/>
 
         <TextView
@@ -89,6 +94,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/song6_text_view"
+            android:onClick="playSong7"
             android:text="Sail"/>
 
         <TextView
@@ -97,6 +103,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/song7_text_view"
+            android:onClick="playSong8"
             android:text="Woman Woman"/>
     </LinearLayout>
 
