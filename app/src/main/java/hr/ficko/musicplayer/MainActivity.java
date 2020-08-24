@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
     private final float RIGHT_VOLUME = 1.0f;
     private final int NO_LOOP = 0;
 
-    //TODO SoundPool is not suitable for this kind of job, the files are too big. Should be replaced..
+    //TODO SoundPool is not suitable for this kind of job, the files are too big. Should be replaced with MediaPlayer.
     private SoundPool mSoundPool;
     private int mSong1;
     private int mSong2;
