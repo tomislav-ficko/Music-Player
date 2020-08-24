@@ -123,6 +123,7 @@
             android:layout_margin="15dp"
             android:adjustViewBounds="true"
             android:maxHeight="60dp"
+            android:onClick="playButton"
             android:src="@drawable/play_button"/>
 
         <ImageView
@@ -133,6 +134,7 @@
             android:layout_toRightOf="@id/play_button"
             android:adjustViewBounds="true"
             android:maxHeight="60dp"
+            android:onClick="pauseButton"
             android:src="@drawable/pause_button"/>
     </LinearLayout>
 
