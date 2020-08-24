@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
     private final float RIGHT_VOLUME = 1.0f;
     private final int NO_LOOP = 0;
 
+    //TODO SoundPool is not suitable for this kind of job, the files are too big. Should be replaced..
     private SoundPool mSoundPool;
     private int mSong1;
     private int mSong2;
@@ -74,15 +75,17 @@ public class MainActivity extends AppCompatActivity {
         mSoundPool.autoPause();
     }
 
+    //TODO see why Android Studio cannot resolve the file names, even though they are the same as the resources.
+    // Despite of this, it manages to install the app and play the sounds
     private void loadSongs() {
-        mSong1 = mSoundPool.load(getApplicationContext(), R.raw.All_I_Need, PRIORITY);
-        mSong2 = mSoundPool.load(getApplicationContext(), R.raw.Headrest_For_My_Soul, PRIORITY);
-        mSong3 = mSoundPool.load(getApplicationContext(), R.raw.I_Am, PRIORITY);
+        mSong1 = mSoundPool.load(getApplicationContext(), R.raw.all_i_need, PRIORITY);
+        mSong2 = mSoundPool.load(getApplicationContext(), R.raw.headrest_for_my_soul, PRIORITY);
+        mSong3 = mSoundPool.load(getApplicationContext(), R.raw.i_am, PRIORITY);
         mSong4 = mSoundPool.load(getApplicationContext(), R.raw.jailbreak, PRIORITY);
-        mSong5 = mSoundPool.load(getApplicationContext(), R.raw.Kill_Your_Heroes, PRIORITY);
-        mSong6 = mSoundPool.load(getApplicationContext(), R.raw.Not_Your_Fault, PRIORITY);
+        mSong5 = mSoundPool.load(getApplicationContext(), R.raw.kill_your_heroes, PRIORITY);
+        mSong6 = mSoundPool.load(getApplicationContext(), R.raw.not_your_fault, PRIORITY);
         mSong7 = mSoundPool.load(getApplicationContext(), R.raw.sail, PRIORITY);
-        mSong8 = mSoundPool.load(getApplicationContext(), R.raw.Woman_Woman, PRIORITY);
+        mSong8 = mSoundPool.load(getApplicationContext(), R.raw.woman_woman, PRIORITY);
     }
 
     private void playSong(int songId) {
