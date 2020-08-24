@@ -28,6 +28,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        mSoundPool = new SoundPool.Builder().build();
+        mSong1 = mSoundPool.load(getApplicationContext(), R.raw.All_I_Need, PRIORITY);
+        mSong2 = mSoundPool.load(getApplicationContext(), R.raw.Headrest_For_My_Soul, PRIORITY);
+        mSong3 = mSoundPool.load(getApplicationContext(), R.raw.I_Am, PRIORITY);
+        mSong4 = mSoundPool.load(getApplicationContext(), R.raw.Jailbreak, PRIORITY);
+        mSong5 = mSoundPool.load(getApplicationContext(), R.raw.Kill_Your_Heroes, PRIORITY);
+        mSong6 = mSoundPool.load(getApplicationContext(), R.raw.Not_Your_Fault, PRIORITY);
+        mSong7 = mSoundPool.load(getApplicationContext(), R.raw.Sail, PRIORITY);
+        mSong8 = mSoundPool.load(getApplicationContext(), R.raw.Woman_Woman, PRIORITY);
     }
 
     public void playSong1(View view) {
