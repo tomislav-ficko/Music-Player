@@ -75,8 +75,6 @@ public class MainActivity extends AppCompatActivity {
         mSoundPool.autoPause();
     }
 
-    //TODO see why Android Studio cannot resolve the file names, even though they are the same as the resources.
-    // Despite of this, it manages to install the app and play the sounds
     private void loadSongs() {
         mSong1 = mSoundPool.load(getApplicationContext(), R.raw.all_i_need, PRIORITY);
         mSong2 = mSoundPool.load(getApplicationContext(), R.raw.headrest_for_my_soul, PRIORITY);
