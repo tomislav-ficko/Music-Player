@@ -4,58 +4,33 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private MediaPlayer mSong1;
-    private MediaPlayer mSong2;
-    private MediaPlayer mSong3;
-    private MediaPlayer mSong4;
-    private MediaPlayer mSong5;
-    private MediaPlayer mSong6;
-    private MediaPlayer mSong7;
-    private MediaPlayer mSong8;
     private MediaPlayer currentSong;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        prepareSongs();
-    }
-
-    public void playSong1(View view) {
-        playSong(mSong1);
-    }
-
-    public void playSong2(View view) {
-        playSong(mSong2);
-    }
-
-    public void playSong3(View view) {
-        playSong(mSong3);
-    }
-
-    public void playSong4(View view) {
-        playSong(mSong4);
-    }
-
-    public void playSong5(View view) {
-        playSong(mSong5);
-    }
-
-    public void playSong6(View view) {
-        playSong(mSong6);
-    }
-
-    public void playSong7(View view) {
-        playSong(mSong7);
-    }
-
-    public void playSong8(View view) {
-        playSong(mSong8);
+        TextView song1 = (TextView) findViewById(R.id.song1_text_view);
+        song1.setOnClickListener(this);
+        TextView song2 = (TextView) findViewById(R.id.song2_text_view);
+        song2.setOnClickListener(this);
+        TextView song3 = (TextView) findViewById(R.id.song3_text_view);
+        song3.setOnClickListener(this);
+        TextView song4 = (TextView) findViewById(R.id.song4_text_view);
+        song4.setOnClickListener(this);
+        TextView song5 = (TextView) findViewById(R.id.song5_text_view);
+        song5.setOnClickListener(this);
+        TextView song6 = (TextView) findViewById(R.id.song6_text_view);
+        song6.setOnClickListener(this);
+        TextView song7 = (TextView) findViewById(R.id.song7_text_view);
+        song7.setOnClickListener(this);
+        TextView song8 = (TextView) findViewById(R.id.song8_text_view);
+        song8.setOnClickListener(this);
     }
 
     public void playButton(View view) {
@@ -68,25 +43,47 @@ public class MainActivity extends AppCompatActivity {
         currentSong.pause();
     }
 
-    private void prepareSongs() {
-        mSong1 = MediaPlayer.create(getApplicationContext(), R.raw.all_i_need);
-        mSong2 = MediaPlayer.create(getApplicationContext(), R.raw.headrest_for_my_soul);
-        mSong3 = MediaPlayer.create(getApplicationContext(), R.raw.i_am);
-        mSong4 = MediaPlayer.create(getApplicationContext(), R.raw.jailbreak);
-        mSong5 = MediaPlayer.create(getApplicationContext(), R.raw.kill_your_heroes);
-        mSong6 = MediaPlayer.create(getApplicationContext(), R.raw.not_your_fault);
-        mSong7 = MediaPlayer.create(getApplicationContext(), R.raw.sail);
-        mSong8 = MediaPlayer.create(getApplicationContext(), R.raw.woman_woman);
-    }
-
-    private void playSong(MediaPlayer song) {
-        song.start();
-        currentSong = song;
-    }
-
     @Override
     protected void onPause() {
         super.onPause();
 
+        currentSong.release();
+    }
+
+    // When any of the songs is clicked, this method is executed
+    @Override
+    public void onClick(View v) {
+        if (currentSong != null) {
+            currentSong.release();
+        }
+
+        switch (v.getId()) {
+            case R.id.song1_text_view:
+                currentSong = MediaPlayer.create(getApplicationContext(), R.raw.all_i_need);
+                break;
+            case R.id.song2_text_view:
+                currentSong = MediaPlayer.create(getApplicationContext(), R.raw.headrest_for_my_soul);
+                break;
+            case R.id.song3_text_view:
+                currentSong = MediaPlayer.create(getApplicationContext(), R.raw.i_am);
+                break;
+            case R.id.song4_text_view:
+                currentSong = MediaPlayer.create(getApplicationContext(), R.raw.jailbreak);
+                break;
+            case R.id.song5_text_view:
+                currentSong = MediaPlayer.create(getApplicationContext(), R.raw.kill_your_heroes);
+                break;
+            case R.id.song6_text_view:
+                currentSong = MediaPlayer.create(getApplicationContext(), R.raw.not_your_fault);
+                break;
+            case R.id.song7_text_view:
+                currentSong = MediaPlayer.create(getApplicationContext(), R.raw.sail);
+                break;
+            case R.id.song8_text_view:
+                currentSong = MediaPlayer.create(getApplicationContext(), R.raw.woman_woman);
+                break;
+        }
+
+        currentSong.start();
     }
 }

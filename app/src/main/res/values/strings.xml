@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name">AWOL Player</string>
     <string name="title">AWOLNATION&#xA; Music Player</string>
+    <string name="song5">Kill Your Heroes</string>
+    <string name="song4">Jailbreak</string>
+    <string name="song2">Headrest For My Soul</string>
+    <string name="song3">I Am</string>
+    <string name="song1">All I Need</string>
+    <string name="song6">Not Your Fault</string>
+    <string name="song7">Sail</string>
+    <string name="song8">Woman Woman</string>
 </resources>

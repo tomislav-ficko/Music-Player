@@ -40,71 +40,56 @@
             style="@style/song_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="playSong1"
-            android:text="All I Need"/>
+            android:text="@string/song1"/>
 
         <TextView
             android:id="@+id/song2_text_view"
             style="@style/song_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/song1_text_view"
-            android:onClick="playSong2"
-            android:text="Headrest For My Soul"/>
+            android:text="@string/song2"/>
 
         <TextView
             android:id="@+id/song3_text_view"
             style="@style/song_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/song2_text_view"
-            android:onClick="playSong3"
-            android:text="I Am"/>
+            android:text="@string/song3"/>
 
         <TextView
             android:id="@+id/song4_text_view"
             style="@style/song_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/song3_text_view"
-            android:onClick="playSong4"
-            android:text="Jailbreak"/>
+            android:text="@string/song4"/>
 
         <TextView
             android:id="@+id/song5_text_view"
             style="@style/song_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/song4_text_view"
-            android:onClick="playSong5"
-            android:text="Kill Your Heroes"/>
+            android:text="@string/song5"/>
 
         <TextView
             android:id="@+id/song6_text_view"
             style="@style/song_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/song5_text_view"
-            android:onClick="playSong6"
-            android:text="Not Your Fault"/>
+            android:text="@string/song6"/>
 
         <TextView
             android:id="@+id/song7_text_view"
             style="@style/song_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/song6_text_view"
-            android:onClick="playSong7"
-            android:text="Sail"/>
+            android:text="@string/song7"/>
 
         <TextView
             android:id="@+id/song8_text_view"
             style="@style/song_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/song7_text_view"
-            android:onClick="playSong8"
-            android:text="Woman Woman"/>
+            android:text="@string/song8"/>
     </LinearLayout>
 
     <LinearLayout
@@ -119,7 +104,7 @@
             android:id="@+id/play_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
             android:layout_margin="15dp"
             android:adjustViewBounds="true"
             android:maxHeight="60dp"
@@ -131,7 +116,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
-            android:layout_toRightOf="@id/play_button"
+            android:layout_toEndOf="@id/play_button"
             android:adjustViewBounds="true"
             android:maxHeight="60dp"
             android:onClick="pauseButton"
